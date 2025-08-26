@@ -1,8 +1,10 @@
 import { Pairings } from "./Pairings.js"
-import { Celebrities } from "./CelebrityList.js"
-import { Kids } from "./Kids.js"
+import { Celebrities, handleCelebrityClick } from "./CelebrityList.js"
+import { Kids, handleKidClick } from "./Kids.js"
 
 const mainContainer = document.querySelector("#container")
+document.addEventListener("click", handleKidClick)
+document.addEventListener("click", handleCelebrityClick)
 
 const applicationHTML = `
     <h1>Make a Memory for Kids</h1>
@@ -24,4 +26,5 @@ const applicationHTML = `
 `
 
 mainContainer.innerHTML = applicationHTML
+
 

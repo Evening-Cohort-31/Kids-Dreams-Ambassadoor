@@ -13,3 +13,13 @@ export const Kids = () => {
     return html
 }
 
+export const handleKidClick = (e) => {
+    const target = e.target
+
+    if (target.dataset.type === "child") {
+        const name = target.textContent
+        const wish = target.dataset.wish
+
+        window.alert(`${name}'s wish is ${wish}`)
+    }
+}
